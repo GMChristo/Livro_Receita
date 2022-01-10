@@ -1,0 +1,44 @@
+name: receita_server
+description: A REST API BackEnd for Portal cmpop
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=2.10.0 <3.0.0"
+
+dependencies:
+  galileo_framework: ^3.0.2 # The core server library.
+  #galileo_auth: ^3.0.1 # Supports stateless authentication via JWT
+  galileo_configuration: ^3.0.2 # Loads application configuration, along with support for .env files.
+  galileo_production: ^2.0.3  # Production application runner.
+  galileo_static: ^3.0.1  # Static file server
+  #galileo_validate: ^2.0.2 # Allows for validation of input data
+  #galileo_twig_dart: ^2.0.0 # Server-side templating engine
+  galileo_cors: ^3.0.0 
+
+  jaguar_jwt: any #Null safety 
+  dotenv: ^3.0.0-nullsafety.0 #Null safety
+  path: ^1.8.0  #Null safety
+  http_parser: ^4.0.0 #Null safety 
+  fluent_query_builder: ^3.0.1
+  uuid: '>=2.2.2 < 3.0.9' # ^3.0.4 Null safety 
+  encrypt: ^5.0.0 #Null safety 
+
+  receita_core:
+    path: ../receita_core
+
+  #esta sobre escrita de dependencias é para resolver um bug no driver postgres 
+  #que impede o mesmo de funcionar com dart 2.8.4 e um bug com form data 
+  #com dados UTF8(caracteres com acento)
+# dependency_overrides:
+#   postgres: ^2.1.1
+#   http_server:
+#    git:
+#      url: https://github.com/dart-lang/http_server.git
+#      ref: df31d20
+
+
+dev_dependencies:
+  test: ^1.17.3 #Null safety 
+  galileo_hot:  ^3.0.1 # Hot-reloading support. :)
+  build_runner: ^2.0.2   #Null safety 

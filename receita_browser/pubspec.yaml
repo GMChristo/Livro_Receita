@@ -1,0 +1,39 @@
+name: receita_browser
+description: A web app that uses AngularDart Components
+# version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: ">=2.10.0 <3.0.0"
+
+dependencies:
+  angular: ^7.0.0
+  # angular_components: ^1.0.2
+  angular_router: ^3.0.0
+  angular_forms: ^4.0.0
+  #sembast_web: ^1.2.0
+  #angular_recaptcha: ^0.1.5
+  # stream_transform: #^0.0.19
+  sass_builder: ^2.1.3
+  intl: any
+  uuid: any
+  crossplat_objectid: any
+  http: any
+  #quiver: ^2.1.5
+  # dart_browser_loader: ^0.1.0
+
+  receita_core:
+    path: ../receita_core
+
+dependency_overrides:
+  #to fix this bug https://github.com/angulardart/angular/issues/1967
+  #https://github.com/dart-lang/sdk/issues/46687
+ # meta: 1.6.0 
+
+dev_dependencies: 
+  angular_test: any                                                                                                 
+  build_runner: any #^1.11.0 #^1.10.4                                                                                                   
+  build_test: any                                                                                             
+  build_web_compilers: any                                                                               
+  pedantic: ^1.9.2                                                                                               
+  test: ^1.15.4
